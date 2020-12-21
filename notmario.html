@@ -120,9 +120,9 @@ class Goomba extends Sprite
 
     bounceOffTube(t)
     {
-        if(this.prevX + this.w <= t.x)
+        if(this.x + this.w <= t.x)
             this.x = t.x - this.w;
-        else if(this.prevX >= t.x+t.w)
+        else if(this.x >= t.x+t.w)
             this.x = t.x + t.w;
 
         //console.log("goomba collision");
