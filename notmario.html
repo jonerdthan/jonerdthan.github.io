@@ -289,7 +289,7 @@ class Model
 			return false;
 		if(a.y + a.h < t.y)
 			return false;
-		if(a.y >= t.y + t.h)
+		if(a.y > t.y + t.h)
 			return false;
 
 		return true;
