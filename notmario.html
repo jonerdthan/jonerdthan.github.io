@@ -97,12 +97,12 @@ class Mario extends Sprite
 
 class Goomba extends Sprite
 {
-    constructor(x, y, image_url)
+    constructor(setX, setY, image_url)
     {
-        super(x, y, image_url);
+        super(setX, setY, image_url);
 
-        this.x = x;
-        this.y = y;
+        this.x = setX;
+        this.y = setY;
         this.w = 37;
         this.h = 45;
         this.onFire = false;
@@ -122,7 +122,7 @@ class Goomba extends Sprite
     {
         if(this.x + this.w <= t.x)
             this.x = t.x - this.w;
-        else if(this.x >= t.x+t.w)
+        else if(this.prevX >= t.x+t.w)
             this.x = t.x + t.w;
 
         //console.log("goomba collision");
