@@ -152,7 +152,7 @@ class Goomba extends Sprite
 
         if(this.onFire)
         {
-            this.image.src = "goomba_fire.png";
+            this.image.src = "GameImages/goomba_fire.png";
             this.burningTime++;
 
         }
@@ -224,12 +224,12 @@ class Model
 	constructor()
 	{
 		this.sprites = [];
-        this.mario = new Mario(150, 295, "mario1.png");
+        this.mario = new Mario(150, 295, "GameImages/mario1.png");
         this.sprites.push(this.mario);
-        this.sprites.push(new Goomba(536, 355, "goomba.png"));
-        this.sprites.push(new Tube(958, 122, "tube.png"));
-		this.sprites.push(new Tube(3, 47, "tube.png"));
-		this.sprites.push(new Tube(448, 269, "tube.png"));
+        this.sprites.push(new Goomba(536, 355, "GameImages/goomba.png"));
+        this.sprites.push(new Tube(958, 122, "GameImages/tube.png"));
+		this.sprites.push(new Tube(3, 47, "GameImages/tube.png"));
+		this.sprites.push(new Tube(448, 269, "GameImages/tube.png"));
 
 	}
 
@@ -297,7 +297,7 @@ class Model
 
     addFireball(x, y)
     {
-        this.fireball = new Fireball(x, y, "fireball.png");
+        this.fireball = new Fireball(x, y, "GameImages/fireball.png");
         this.sprites.push(this.fireball);
     }
 
@@ -323,15 +323,15 @@ class View
         this.canvas = document.getElementById("myCanvas");
         this.mario_images = [];
 		this.mario_images.push(new Image());
-		this.mario_images[0].src = "mario1.png";
+		this.mario_images[0].src = "GameImages/mario1.png";
 		this.mario_images.push(new Image());
-		this.mario_images[1].src = "mario2.png";
+		this.mario_images[1].src = "GameImages/mario2.png";
 		this.mario_images.push(new Image());
-		this.mario_images[2].src = "mario3.png";
+		this.mario_images[2].src = "GameImages/mario3.png";
 		this.mario_images.push(new Image());
-		this.mario_images[3].src = "mario4.png";
+		this.mario_images[3].src = "GameImages/mario4.png";
 		this.mario_images.push(new Image());
-		this.mario_images[4].src = "mario5.png";
+		this.mario_images[4].src = "GameImages/mario5.png";
 	}
 
 	update()

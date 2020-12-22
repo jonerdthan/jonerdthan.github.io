@@ -97,12 +97,12 @@ class Mario extends Sprite
 
 class Goomba extends Sprite
 {
-    constructor(x, y, image_url)
+    constructor(setX, setY, image_url)
     {
-        super(x, y, image_url);
+        super(setX, setY, image_url);
 
-        this.x = x;
-        this.y = y;
+        this.x = setX;
+        this.y = setY;
         this.w = 37;
         this.h = 45;
         this.onFire = false;
@@ -120,7 +120,7 @@ class Goomba extends Sprite
 
     bounceOffTube(t)
     {
-        if(this.prevX + this.w <= t.x)
+        if(this.x + this.w <= t.x)
             this.x = t.x - this.w;
         else if(this.prevX >= t.x+t.w)
             this.x = t.x + t.w;
@@ -285,11 +285,11 @@ class Model
 	{
 		if(a.x+a.w<t.x)
 			return false;
-		if(a.x>t.x+a.w)
+		if(a.x>t.x+t.w)
 			return false;
 		if(a.y + a.h < t.y)
 			return false;
-		if(a.y >= t.y + t.h)
+		if(a.y > t.y + t.h)
 			return false;
 
 		return true;
